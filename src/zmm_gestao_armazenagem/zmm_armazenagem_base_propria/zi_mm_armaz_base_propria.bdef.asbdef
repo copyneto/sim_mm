@@ -1,0 +1,18 @@
+unmanaged implementation in class zclmm_armaz_base_propria unique;
+strict ( 2 );
+
+define behavior for ZI_MM_ARMAZ_BASE_PROPRIA alias Propria
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  //create;
+  //update;
+  //delete;
+  action ( features : instance ) ajuste_estoque; // parameter ZI_MM_TERCEIRO_PARAM;
+  action ( features : instance ) gerar_retorno parameter ZI_MM_GERAR_RETOR_ARMAZ_POPUP;
+  action ( features : instance ) descarga      parameter ZI_MM_TERCEIRO_PARAM;
+  action ( features : instance ) set_qtd_receb parameter ZI_MM_TERCEIRO_PARAM;
+  action ( features : instance ) motivo        parameter ZI_MM_TERCEIRO_PARAM;
+}

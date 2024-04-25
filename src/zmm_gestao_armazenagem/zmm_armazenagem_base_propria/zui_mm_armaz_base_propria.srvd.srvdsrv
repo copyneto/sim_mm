@@ -1,0 +1,9 @@
+@EndUserText.label: 'Service definition - Gestao de Armazenagem base própria'
+define service ZUI_MM_ARMAZ_BASE_PROPRIA {
+  expose ZI_MM_ARMAZ_BASE_PROPRIA_CE as Base_Propria;
+  expose ZC_MM_ARMAZ_BASE_PROPRIA as Base_Propria_CE;
+  expose ZI_MM_VH_MOTIVO_MOV as MotivoVH;
+  expose ZI_MM_VH_BP_BASE as BpBase;
+  expose ZI_MM_VH_MODALI_FRETE as ModalidadeFrete;
+  expose ZI_MM_VH_AGENTE_FRETE as AgenteFrete;
+}

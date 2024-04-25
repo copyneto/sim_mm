@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition'
+define service ZUI_WMS_ENVIO_DOC_RECEBIMENTO {
+  expose ZC_MM_WMS_INTEGRAR_RECEBIMENTO;
+}

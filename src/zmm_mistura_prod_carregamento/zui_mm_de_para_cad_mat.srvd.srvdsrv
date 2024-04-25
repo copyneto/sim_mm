@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition De-PARA para dep dif cadastro de mat'
+define service ZUI_MM_DE_PARA_CAD_MAT {
+  expose ZC_MM_DE_PARA_CAD_MAT;
+}

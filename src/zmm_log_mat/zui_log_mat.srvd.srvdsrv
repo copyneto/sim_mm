@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition log material'
+define service ZUI_LOG_MAT {
+  expose ZC_MM_LOG_MAT;
+}

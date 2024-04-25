@@ -1,0 +1,48 @@
+@Metadata.layer: #CORE
+annotate view ZC_MM_LOG_MAT with
+{
+  @Consumption.valueHelpDefinition: [{ entity: { element: 'Material' , name: 'ZI_CA_VH_MATNR' }}]
+
+  @UI: {  lineItem:       [ { position: 40 },
+                            { type: #FOR_ACTION, position: 20, dataAction: 'button', label: 'Reprocessar', invocationGrouping: #CHANGE_SET  }
+                          ]}
+  @UI.selectionField: [{ position: 10 }]
+  Matnr;
+  @Consumption.valueHelpDefinition: [{ entity: { element: 'WerksCode' , name: 'ZI_CA_VH_WERKS' }}]
+  @UI.selectionField: [{ position: 20 }]
+  @UI.lineItem: [{ position: 50 }]
+  Werks;
+  @Consumption.valueHelpDefinition: [{ entity: { element: 'Plant' , name: 'ZI_CA_VH_LGORT' }}]
+  @UI.selectionField: [{ position: 30 }]
+  @UI.lineItem: [{ position: 60 }]
+  Lgort;
+  @UI.selectionField: [{ position: 40 }]
+  @UI.lineItem: [{ position: 70 }]
+  Vkorg;
+  @UI.lineItem: [{ position: 80 }]
+  Vtweg;
+  @UI.lineItem: [{ position: 90 }]
+  @UI.selectionField: [{ position: 80 }]
+  Ztype;
+  //    Zid;
+  //    Znumber;
+  @UI.lineItem: [{ position: 100 }]
+  Zmessage;
+  //    ZlogNo;
+  //    ZlogMsgNo;
+  //    ZmessageV1;
+  //    ZmessageV2;
+  //    ZmessageV3;
+  //    ZmessageV4;
+  @UI.lineItem: [{ position: 30 }]
+  @UI.selectionField: [{ position: 50 }]
+  Usuario;
+  @UI.lineItem: [{ position: 10 }]
+  @Consumption.filter.selectionType: #INTERVAL
+  @UI.selectionField: [{ position: 60 }]
+  Data;
+  @UI.lineItem: [{ position:20 }]
+  @UI.selectionField: [{ position: 70 }]
+  Hora;
+
+}

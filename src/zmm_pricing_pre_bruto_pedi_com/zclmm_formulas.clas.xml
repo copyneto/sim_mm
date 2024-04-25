@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCLMM_FORMULAS</CLSNAME>
+    <LANGU>P</LANGU>
+    <DESCRIPT>Fórmulas MM</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>M_OIL_CALC_RV64A924</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>OIL-Fórmula 924 - Preencher Memória</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>M_OIL_CALC_RV64A925</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>OIL-Fórmula valor 925 - Cálculo de Preço Líquido</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>M_OIL_CALC_RV64A926</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>OIL-Fórmula valor 926 - Cálculo de Preço Líquido</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>M_RET_CALC_RV64A922</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>RET-Fórmula valor 922 - Copiar da Memória</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>M_RET_CALC_RV64A923</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>RET-Fórmula valor 923 - Cálculo de Preço Líquido</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>M_RET_EXCL_COND_ZERADA</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>RET-Excluir condição zerada</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>M_OIL_CALC_RV64A924</CMPNAME>
+     <SCONAME>CV_KSCHL</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Tipo de condição</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>M_OIL_CALC_RV64A924</CMPNAME>
+     <SCONAME>IS_KOMK</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Determinação de preço - cabeçalho comunicação</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>M_OIL_CALC_RV64A924</CMPNAME>
+     <SCONAME>IS_KOMP</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Determinação de preço item de comunicação</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>M_OIL_CALC_RV64A924</CMPNAME>
+     <SCONAME>IS_KOMV</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Registro de condição de comunicação p/determinação de preço</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>M_OIL_CALC_RV64A925</CMPNAME>
+     <SCONAME>CS_RETTXKOMV</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Registro de condição de comunicação p/determinação de preço</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>M_OIL_CALC_RV64A925</CMPNAME>
+     <SCONAME>CS_XKOMV</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Estrutura-KOMV plus índice</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>M_OIL_CALC_RV64A925</CMPNAME>
+     <SCONAME>CV_XKWERT</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Valor condição</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>M_OIL_CALC_RV64A925</CMPNAME>
+     <SCONAME>IS_KOMK</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Determinação de preço - cabeçalho comunicação</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>M_OIL_CALC_RV64A925</CMPNAME>
+     <SCONAME>IS_KOMP</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Determinação de preço item de comunicação</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>M_OIL_CALC_RV64A926</CMPNAME>
+     <SCONAME>CS_KOMP</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Determinação de preço item de comunicação</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>M_OIL_CALC_RV64A926</CMPNAME>
+     <SCONAME>CS_XKOMV</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Estrutura-KOMV plus índice</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>M_OIL_CALC_RV64A926</CMPNAME>
+     <SCONAME>CV_XKWERT</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Valor condição</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>M_OIL_CALC_RV64A926</CMPNAME>
+     <SCONAME>IS_KOMK</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Determinação de preço - cabeçalho comunicação</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>M_OIL_CALC_RV64A926</CMPNAME>
+     <SCONAME>IV_XWORKD</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Valor condição</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>M_OIL_CALC_RV64A926</CMPNAME>
+     <SCONAME>IV_XWORKE</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Valor condição</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>M_OIL_CALC_RV64A926</CMPNAME>
+     <SCONAME>IV_XWORKF</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Valor condição</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>M_OIL_CALC_RV64A926</CMPNAME>
+     <SCONAME>IV_XWORKG</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Valor condição</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>M_OIL_CALC_RV64A926</CMPNAME>
+     <SCONAME>IV_XWORKH</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Valor condição</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>M_OIL_CALC_RV64A926</CMPNAME>
+     <SCONAME>IV_XWORKI</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Valor condição</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>M_OIL_CALC_RV64A926</CMPNAME>
+     <SCONAME>IV_XWORKJ</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Valor condição</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>M_OIL_CALC_RV64A926</CMPNAME>
+     <SCONAME>IV_XWORKK</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Montante ou porcentagem da condição</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>M_OIL_CALC_RV64A926</CMPNAME>
+     <SCONAME>IV_XWORKL</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Montante ou porcentagem da condição</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>M_OIL_CALC_RV64A926</CMPNAME>
+     <SCONAME>IV_XWORKM</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Montante ou porcentagem da condição</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

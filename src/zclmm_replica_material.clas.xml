@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCLMM_REPLICA_MATERIAL</CLSNAME>
+    <LANGU>P</LANGU>
+    <DESCRIPT>Classe Replicação de dados de material</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>GS_RETURN</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Parâmetro de retorno</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GT_TVTA</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Unidade organizacional: áreas de vendas</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GV_MKVE</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Código de um caractere</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GV_TIME</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Nº inteiro com sinal +/- (-2.147.483.648 .. 2.147.483.647)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GV_VISAO_DEP</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Valor verdadeiro: verdadeiro/falso</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>BUSCAR_DADOS</CMPNAME>
+     <SCONAME>IR_MATERIAL</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Nº do material</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BUSCAR_DADOS</CMPNAME>
+     <SCONAME>IV_DATA</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Data de criação</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUIR_DADOS</CMPNAME>
+     <SCONAME>IS_MARA</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Dados gerais de material</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUIR_DADOS</CMPNAME>
+     <SCONAME>IS_MARC</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Dados de centro para material</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUIR_DADOS</CMPNAME>
+     <SCONAME>IS_MBEW</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Avaliação do material</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUIR_DADOS</CMPNAME>
+     <SCONAME>IS_MVKE</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Dados de venda para material</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CRIAR_DADOS</CMPNAME>
+     <SCONAME>IR_MATERIAL</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Tabela para a estrutura MAT_RANGE</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>EXIBIR_LOG</CMPNAME>
+     <SCONAME>CT_RETURN</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Tabela de log para dados de material</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GRAVAR_LOG</CMPNAME>
+     <SCONAME>IS_PLANTDATA</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Dados de material a nível de centro</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GRAVAR_LOG</CMPNAME>
+     <SCONAME>IS_SALESDATA</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Dados de venda</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GRAVAR_LOG</CMPNAME>
+     <SCONAME>IS_STORAGELOCATIONDATA</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Dados de material a nível de depósito</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GRAVAR_LOG</CMPNAME>
+     <SCONAME>RS_RETURN</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Tabela de log para dados de material</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>OBTER_TEMPO</CMPNAME>
+     <SCONAME>IV_DATA</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Registro da hora UTC em forma breve (AAAAMMDDhhmmss)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>OBTER_TEMPO</CMPNAME>
+     <SCONAME>RV_DATA</SCONAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Registro da hora UTC em forma breve (AAAAMMDDhhmmss)</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

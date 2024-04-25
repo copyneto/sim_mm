@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service definition - Carga - Árvore Merc'
+define service ZUI_MM_CARGA_ARVORE_MERC {
+  expose ZC_MM_ARVORE_MERC;
+  expose ZC_MM_ARVORE_MERCADORIA_LOG;
+}

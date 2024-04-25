@@ -1,0 +1,91 @@
+@Metadata.layer: #CORE
+annotate view ZC_MM_DOC_MAT with
+{
+  @UI.lineItem: [{ position: 10 }]
+  Mblnr;
+  @UI.lineItem: [{ position: 20 }]
+  Mjahr;
+  @UI.lineItem: [{ position: 30 }]
+  Zeile;
+  @UI.lineItem: [{ position: 40 }]
+  @UI.selectionField: [{ position: 10 }]
+  @Consumption.valueHelpDefinition: [{ entity:{ name: 'ZI_MM_VH_TIPO_DOC', element: 'ZtipoDoc' } }]
+  ZtipoDoc;
+  @UI.lineItem: [{ position: 50 }]
+  @UI.selectionField: [{ position: 30 }]
+  @Consumption.valueHelpDefinition: [{ entity:{ name: 'ZI_MM_VH_STATUS_INT', element: 'ZstatusIntegracao' } }]
+  ZstatusIntegracao;
+  @UI.lineItem: [{ position: 60 }]
+  Zorigem;
+  @UI.lineItem: [{ position: 90 }]
+  @UI.selectionField: [{ position: 40 }]
+  @Consumption.valueHelpDefinition: [{ entity:{ name: 'ZI_CA_VH_MATNR', element: 'Material' } }]
+  Matnr;
+  @UI.lineItem: [{ position: 100 }]
+  ProductDescription;
+  @UI.lineItem: [{ position: 110 }]
+  ProductType;
+  @UI.lineItem: [{ position: 120 }]
+  @UI.selectionField: [{ position: 70 }]
+  @Consumption.valueHelpDefinition: [{ entity:{ name: 'ZI_MM_VH_GRUPO_MERC', element: 'ProductGroup' } }]
+  ProductGroup;
+  @UI.lineItem: [{ position: 130 }]
+  Bwart;
+  @UI.lineItem: [{ position: 140 }]
+  Shkzg;
+  @UI.lineItem: [{ position: 150 }]
+  @UI.selectionField: [{ position: 50 }]
+  @Consumption.valueHelpDefinition: [{ entity:{ name: 'ZI_MM_VH_REMESSA', element: 'Remessa' } }]
+  VbelnIm;
+  @UI.lineItem: [{ position: 160 }]
+  VbelpIm;
+  @UI.lineItem: [{ position: 70 }]
+  @UI.selectionField: [{ position: 60 }]
+  @Consumption.valueHelpDefinition: [{ entity:{ name: 'ZI_CA_VH_WERKS', element: 'WerksCode' } }]
+  Werks;
+  @UI.lineItem: [{ position: 80 }]
+  Lgort;
+  @UI.lineItem: [{ position: 170 }]
+  Umwrk;
+  @UI.lineItem: [{ position: 180 }]
+  Umlgo;
+  @UI.lineItem: [{ position: 190 }]
+  Erfmg;
+  @UI.lineItem: [{ position: 200 }]
+  Erfme;
+  @UI.lineItem: [{ position: 210 }]
+  Zqtenv;
+  @UI.lineItem: [{ position: 220 }]
+  Meins;
+  @UI.hidden: true
+  Smbln;
+  @UI.hidden: true
+  Sjahr;
+  @UI.hidden: true
+  Smblp;
+  @UI.lineItem: [{ position: 230 }]
+  Xnull;
+  @UI.lineItem: [{ position: 240 }]
+  Ernam;
+  @UI.lineItem: [{ position: 250 }]
+  @Consumption.filter.selectionType: #INTERVAL
+  @UI.selectionField: [{ position: 20 }]
+  @Consumption.filter.mandatory: true
+  Erdat;
+  @UI.lineItem: [{ position: 260 }]
+  Erzet;
+  @UI.lineItem: [{ position: 270 }]
+  Aenam;
+  @UI.lineItem: [{ position: 280 }]
+  Aedat;
+  @UI.lineItem: [{ position: 290 }]
+  Aezet;
+  @UI.lineItem: [{ position: 300 }]
+  Type;
+  @UI.lineItem: [{ position: 310 }]
+  Zid;
+  @UI.lineItem: [{ position: 320 }]
+  Znumber;
+  @UI.lineItem: [{ position: 330 }]
+  Zmessage;
+}

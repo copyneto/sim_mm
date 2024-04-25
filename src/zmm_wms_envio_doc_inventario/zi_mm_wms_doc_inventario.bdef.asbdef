@@ -1,0 +1,15 @@
+managed implementation in class ZCLMM_WMS_INTEGRAR_DOCINV_BHV unique;
+strict;
+
+define behavior for ZI_MM_WMS_DOC_INVENTARIO alias InventarioWMS
+with unmanaged save
+authorization master ( instance )
+lock master
+{
+  //  create;
+  //  update;
+  //  delete;
+  action (features : instance) enviardocs;
+
+
+}

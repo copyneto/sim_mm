@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition'
+define service ZUI_DOC_REM_REC {
+  expose ZC_MM_DOC_REM_REC;
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition HIST_CST60'
+define service ZUI_HIST_CST60 {
+  expose ZC_MM_HIST_CST60;
+}

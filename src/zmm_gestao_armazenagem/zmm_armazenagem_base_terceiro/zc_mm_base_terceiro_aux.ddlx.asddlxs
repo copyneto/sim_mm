@@ -1,0 +1,92 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+        typeName: '',
+        typeNamePlural: 'Documentos'
+    }
+@UI.presentationVariant: [{
+    sortOrder: [
+       { by: 'DeliveryDocument' },
+       { by: 'DeliveryDocumentItem', direction: #DESC } ],
+     visualizations: [{ type: #AS_LINEITEM }],
+     requestAtLeast: [ 'bukrs'
+                      ]
+    }]
+annotate view ZC_MM_BASE_TERCEIRO_AUX with
+{
+  @EndUserText.label: 'Aviso de Recebimento'
+  @UI.lineItem: [{ position: 20 },
+                 {type: #FOR_ACTION, dataAction: 'ajuste_estoque', label: 'Ajusta Estoque',invocationGrouping: #CHANGE_SET}]
+  DeliveryDocument;
+  @UI.hidden
+  DeliveryDocumentItem;
+  @UI.lineItem: [{ position: 10, criticality: 'semaforo' }]
+  @EndUserText.label: 'Semáforo Perda/Ganhos'
+  semaforo;
+  @EndUserText.label: 'Número e Série NFE Remessa'
+  @UI.lineItem: [{ position: 40 }]
+  @UI.selectionField: [{ position: 10 }]
+  DeliveryDocumentBySupplier;
+  @Consumption.filter.selectionType: #INTERVAL
+  @Consumption.filter.mandatory: true
+  @UI.selectionField: [{ position: 20 }]
+  @UI.lineItem: [{ position: 50 }]
+  @EndUserText.label: 'Data'
+  DocumentDate;
+  @EndUserText.label: 'Tipo do movimento'
+  @UI.lineItem: [{ position: 45 }]
+  tipomov;
+  @EndUserText.label: 'Centro'
+  @UI.lineItem: [{ position: 60 }]
+  @UI.selectionField: [{ position: 30 }]
+  @Consumption.filter.mandatory: true
+  Plant;
+  @EndUserText.label: 'Nome Centro'
+  @UI.lineItem: [{ position: 70 }]
+  WerksCodeName;
+  @UI.lineItem: [{ position: 80, semanticObjectAction: 'display', type: #WITH_INTENT_BASED_NAVIGATION, requiresContext: true }]
+  @UI.selectionField: [{ position: 40 }]
+  @EndUserText.label: 'Material'
+  Material;
+  @UI.lineItem: [{ position: 90 }]
+  @EndUserText.label: 'Descrição Material'
+  MaterialName;
+  @UI.lineItem: [{ position: 100 }]
+  @EndUserText.label: 'Quantidade Descarga'
+  descarga;
+  @UI.lineItem: [{ position: 110 }]
+  @EndUserText.label: 'Quantidade Faturada'
+  ActualDeliveredQtyInBaseUnit;
+  @UI.lineItem: [{ position: 120 }]
+  @EndUserText.label: 'Perda/Ganho'
+  perdaganho;
+  @EndUserText.label: 'Unidade de Medida Básica'
+  @UI.lineItem: [{ position: 130 }]
+  BaseUnit;
+  @UI.lineItem: [{ position: 140 }]
+  @EndUserText.label: 'Valor Perda/Ganho'
+  valorperdaganho;
+  @EndUserText.label: 'Parceiro de Negócios'
+  @UI.lineItem: [{ position: 150, semanticObjectAction: 'manage', type: #WITH_INTENT_BASED_NAVIGATION, requiresContext: true }]
+  @UI.selectionField: [{ position: 50 }]
+  BusinessPartner;
+  @UI.lineItem: [{ position: 180, semanticObjectAction: 'display', type: #WITH_INTENT_BASED_NAVIGATION, requiresContext: true }]    
+  @UI.selectionField: [{ position: 60 }]
+  @EndUserText.label: 'Docnum Remessa'
+  BR_NotaFiscal;
+  @UI.lineItem: [{ position: 170 }]
+  @UI.selectionField: [{ position: 70 }]
+  @EndUserText.label: 'Status'
+  status;
+  @EndUserText.label: 'Estoque Ajustado'
+  @UI.lineItem: [{ position: 180 }]
+  estoqueajustado;
+  @EndUserText.label: 'Documento de Material'
+  @UI.lineItem: [{ position: 190, semanticObjectAction: 'postGoodsMovementInWebGUI', type: #WITH_INTENT_BASED_NAVIGATION, requiresContext: true }]
+  MaterialDocumentAjuste;
+//  @EndUserText.label: 'Docnum Retorno'
+//  @UI.lineItem: [{ position: 200, semanticObjectAction: 'display', type: #WITH_INTENT_BASED_NAVIGATION, requiresContext: true }]
+//  docnumretorno;
+  @UI.lineItem: [{ position: 200, semanticObjectAction: 'DisplayRetorno', type: #WITH_INTENT_BASED_NAVIGATION, requiresContext: true }]    
+  @UI.selectionField: [{ position: 60 }]
+  docnumretorno;
+}

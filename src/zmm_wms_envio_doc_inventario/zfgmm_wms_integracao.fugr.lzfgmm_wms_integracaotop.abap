@@ -1,0 +1,3 @@
+FUNCTION-POOL ZFGMM_WMS_INTEGRACAO.         "MESSAGE-ID ..
+
+* INCLUDE LZFGMM_WMS_INTEGRACAOD...          " Local class definition

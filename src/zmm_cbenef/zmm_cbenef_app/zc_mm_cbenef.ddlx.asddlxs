@@ -1,0 +1,85 @@
+@Metadata.layer: #CORE
+@UI: {
+    headerInfo: {
+        typeNamePlural: 'Benefícios Fiscais'
+    },
+    presentationVariant: [{
+        sortOrder: [{
+            by: 'Shipfrom',
+            direction: #ASC
+        }],
+        visualizations: [{
+            type: #AS_LINEITEM
+        }]
+    }]
+}
+annotate view ZC_MM_CBENEF with
+{
+  @UI.facet: [
+  { id: 'HEADER',
+    isSummary: true,
+    purpose: #STANDARD,
+    type: #IDENTIFICATION_REFERENCE,
+    //label: 'Cabeçalho',
+    position: 10
+  }
+  ]
+  @UI: { lineItem:      [{ position: 10 }],
+        identification: [{ position: 10 }],
+        selectionField: [{ position: 10 }] }
+  Shipfrom;
+  @UI: { lineItem:       [{ position: 20 }],
+         identification: [{ position: 20 }],
+         selectionField: [{ position: 20 }] }
+  Shipto;
+  @UI: { lineItem:       [{ position: 30 }],
+         identification: [{ position: 30 }],
+         selectionField: [{ position: 30 }] }
+  Direct;
+  @UI: { lineItem:       [{ position: 40 }],
+         identification: [{ position: 40 }],
+         selectionField: [{ position: 40 }] }
+  Taxsit;
+  @UI: { lineItem:       [{ position: 50 }],
+         identification: [{ position: 50 }] }
+  Cfop;
+  @UI: { lineItem:       [{ position: 60 }],
+         identification: [{ position: 60 }],
+         selectionField: [{ position: 50 }] }
+  Nbm;
+  @UI: { lineItem:       [{ position: 70 }],
+         identification: [{ position: 70 }],
+         selectionField: [{ position: 60 }] }
+  Matnr;
+  @UI: { lineItem:       [{ position: 80 }],
+         identification: [{ position: 80 }]}
+  Cbenef;
+  @UI: { lineItem:       [{ position: 90 }],
+         identification: [{ position: 90 }]}
+  Motdesicms;
+  @UI: { lineItem:       [{ position: 100 }],
+         identification: [{ position: 100 }]}
+  TipoCalc;
+  
+  @UI.hidden: true
+  RegioTextFrom;  
+  @UI.hidden: true
+  RegioTextTo;
+  @UI.hidden: true
+  DirectText;
+  @UI.hidden: true
+  TaxsitText;
+  @UI.hidden: true
+  CFOPText;
+  @UI.hidden: true
+  NBMText;
+  @UI.hidden: true
+  MaterialText;   
+  @UI.hidden: true  
+  CBText;
+  @UI.hidden: true
+  MotDesIcmsText;
+  @UI.hidden: true
+  TipCalcText;     
+
+}

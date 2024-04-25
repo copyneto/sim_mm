@@ -1,0 +1,39 @@
+managed implementation in class ZCLMM_BHV_HIST_CST60 unique;
+strict ( 2 );
+
+define behavior for ZI_MM_HIST_CST60 alias Historico
+persistent table ztmm_hist_cst60
+lock master
+authorization master ( instance )
+{
+  field ( readonly : update ) nfenum, series, stcd1;
+  field ( mandatory : create ) nfenum, series, stcd1;
+  create;
+  update;
+  delete;
+
+  determination validatCstIcms on save { field cst_icms; }
+
+  mapping for ztmm_hist_cst60
+  {
+    Nfenum = nfenum;
+    Series = series;
+    Stcd1 = stcd1;
+    Credat = credat;
+    Matnr = matnr;
+    CFOP = cfop;
+    Menge = menge;
+    Werks = werks;
+    Cst_icms = cst_icms;
+    Waerk = waerk;
+    Bc_icms = bc_icms;
+    V_icms_pr = v_icms_pr;
+    Bc_icms_st = bc_icms_st;
+    V_icms_st = v_icms_st;
+    Bc_icms_st_fcp = bc_icms_st_fcp;
+    V_icms_st_fcp = v_icms_st_fcp;
+    V_icms_rate = v_icms_rate;
+    v_icms_rate_st = v_icms_rate_st;
+    V_icms_rate_fcp = v_icms_rate_fcp;
+  }
+}

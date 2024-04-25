@@ -1,0 +1,42 @@
+managed;
+strict ( 2 );
+
+define behavior for ZI_MM_CONV_MEDIDATP alias ZI_MM_CONV_MEDIDA
+implementation in class ZCLMM_CONV_MEDIDA unique
+persistent table ztmm_conv_medida
+etag master LocalLastChangedAt
+lock master
+authorization master ( global )
+
+{
+  field ( readonly )
+  CreatedBy,
+  CreatedAt,
+  LastChangedBy,
+  LastChangedAt,
+  LocalLastChangedAt;
+
+  field ( readonly : update )
+  Matnr,
+  Lifnr,
+  Cprod;
+
+
+  create;
+  update;
+  delete;
+
+  mapping for ZTMM_CONV_MEDIDA
+  {
+    Matnr = MATNR;
+    Lifnr = LIFNR;
+    Cprod = CPROD;
+    UomExt = UOM_EXT;
+    UomInt = UOM_INT;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+}

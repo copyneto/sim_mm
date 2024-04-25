@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service definition - App Movimentar Mercadorias'
+define service ZUI_WMS_EXEC_MOVI_MERC {
+  expose ZC_MM_WMS_EXEC_MOVI_MERC;
+  expose ZC_MM_WMS_EXEC_MOVI_MERC_CE;
+}

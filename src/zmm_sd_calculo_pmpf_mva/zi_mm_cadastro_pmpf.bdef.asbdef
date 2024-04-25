@@ -1,0 +1,35 @@
+managed implementation in class zclmm_cadastro_pmpf unique;
+strict ( 2 );
+
+define behavior for ZI_MM_CADASTRO_PMPF alias Manutencao
+persistent table ztmm_pmpf
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+  field ( readonly ) Criado_por, Criado_em, Modificado_por, Modificado_em, Hora;
+  field ( readonly : update ) Chave_pais, Regiao_fiscal, Material, Valido_des;
+
+  validation valida_campos on save { create; }
+
+  mapping for ztmm_pmpf
+  {
+    Chave_pais = land1;
+    Regiao_fiscal = txreg;
+    Material = matnr;
+    Valido_des = validfrom;
+    Valido_ate = validto;
+    Preco = price;
+    Num_uni = factor;
+    Uni_preco = unit;
+    Criado_por = CREATED_BY;
+    Criado_em = CREATED_AT;
+    Modificado_por = LAST_CHANGED_BY;
+    Modificado_em = LAST_CHANGED_AT;
+    Hora = LOCAL_LAST_CHANGED_AT;
+  }
+}

@@ -1,0 +1,73 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'Carga Árvore Mercadológica',
+    typeNamePlural: 'Carga Árvore Mercadológica',
+    title: {
+      type: #STANDARD,
+      label: 'Carga Árvore Mercadológica',
+      value: 'Filename'
+    }
+  }}
+@UI.lineItem: [{criticality: 'StatusCor' }]
+annotate entity ZC_MM_ARVORE_MERC with
+{
+  @UI.facet: [
+     {
+       id: 'idSintese',
+       type: #COLLECTION,
+       label: 'Síntese',
+       position: 10
+     },
+     {
+       type: #FIELDGROUP_REFERENCE,
+       parentId: 'idSintese',
+       targetQualifier: 'idGeral',
+       label: 'Dados Gerais',
+       position: 20
+     },
+     { id: 'Parametros',
+       purpose: #STANDARD,
+       type: #LINEITEM_REFERENCE,
+       label: 'Mensagens',
+       position: 30,
+       targetElement: '_Mensagens'
+     }
+  ]
+
+  @UI.lineItem: [{ position: 10 }]
+  @UI.selectionField: [{ position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  Filename;
+
+  @UI.lineItem: [{ position: 20 }]
+  @UI.selectionField: [{ position: 20 }]
+  CreatedBy;
+
+  @UI.lineItem: [{ position: 30 }]
+  @UI.selectionField: [{ position: 30 }]
+  CreatedDate;
+
+  @UI.lineItem: [{ position: 40 }]
+  @UI.selectionField: [{ position: 40 }]
+  CreatedAt;
+
+  @UI.hidden: true
+  LastChangedBy;
+
+  @UI.hidden: true
+  LastChangedDate;
+
+  @UI.hidden: true
+  LastChangedAt;
+  
+  @UI.lineItem: [{ position: 70, criticality: 'StatusCor' }]
+  StatusText;
+  
+  @UI.hidden: true
+  StatusCor;
+
+  @UI.hidden: true
+  LocalLastChangedAt;
+
+}

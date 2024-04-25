@@ -1,0 +1,54 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'Envio Documentos de Inventário para WMS',
+    typeNamePlural: 'Envio Documentos de Inventário para WMS'
+  }
+}
+annotate entity ZC_MM_WMS_DOC_INVENTARIO with
+{
+  @UI.facet: [ {
+    id: 'idCollection',
+    type: #COLLECTION,
+    position: 10
+  } ]
+
+  @UI.selectionField: [{ position: 10 }]
+  @UI.lineItem     : [{ position: 10 }, { type: #FOR_ACTION, position: 10, dataAction: 'enviardocs', label: 'Executar Integração', invocationGrouping: #CHANGE_SET }]
+  @EndUserText.label: 'Documento'
+  PhysicalInventoryDocument;
+  @UI.lineItem     : [{ position: 20 }]
+  @EndUserText.label: 'Item'
+  PhysicalInventoryDocumentItem;
+  @UI.lineItem     : [{ position: 30 }]
+  @EndUserText.label: 'Ano'
+  FiscalYear;
+  @UI.lineItem     : [{ position: 40 }]
+  @UI.selectionField: [{ position: 30 }]
+  @EndUserText.label: 'Centro'
+  Plant;
+  @UI.lineItem     : [{ position: 60 }]
+  @EndUserText.label: 'Depósito'
+  StorageLocation;
+  @UI.lineItem     : [{ position: 70 }]
+  @EndUserText.label: 'Quantidade'
+  Quantity;
+  @UI.lineItem     : [{ position: 80 }]
+  @EndUserText.label: 'Material'
+  @UI.selectionField: [{ position: 40 }]
+  Material;
+  @UI.lineItem     : [{ position: 90 }]
+  @EndUserText.label: 'Tipo material'
+  MaterialType;
+  @UI.lineItem     : [{ position: 100 }]
+  @EndUserText.label: 'Grupo material'
+  MaterialGroup;
+  @UI.hidden: true
+  MaterialName;
+  @UI.lineItem     : [{ position: 100 }]
+  @EndUserText.label: 'Unid. medida'
+  MaterialUnitMeasure;
+  @UI.selectionField: [{ position: 20 }]
+  DocumentDate;
+
+}

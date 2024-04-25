@@ -1,0 +1,5 @@
+CLASS zclmm_cadastro_pmpf DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zi_mm_cadastro_pmpf.
+ENDCLASS.
+
+CLASS zclmm_cadastro_pmpf IMPLEMENTATION.
+ENDCLASS.

@@ -1,0 +1,34 @@
+managed implementation in class zclmm_bp_cbenef unique;
+strict ( 2 );
+
+define behavior for ZI_MM_CBENEF //alias <alias_name>
+persistent table ztmm_cbenef
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+  field( mandatory: create, readonly: update) Shipfrom, Shipto, Direct, Taxsit, Cfop;//, Nbm, Matnr;
+  field ( readonly: update ) Nbm, Matnr;
+
+  validation valida_campos on save { create; update; field Nbm, Matnr;  }
+
+
+  mapping for ztmm_cbenef
+  {
+    Shipfrom = shipfrom;
+    Shipto = shipto;
+    Direct = direct;
+    Taxsit = taxsit;
+    Cfop = cfop;
+    Nbm = nbm;
+    Matnr = matnr;
+    Cbenef = cbenef;
+    Motdesicms = motdesicms;
+    TipoCalc = tipo_calc;
+  }
+
+}

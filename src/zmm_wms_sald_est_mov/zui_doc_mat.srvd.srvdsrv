@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition - Docs Materreial'
+define service ZUI_DOC_MAT {
+  expose ZC_MM_DOC_MAT;
+}

@@ -1,0 +1,79 @@
+@Metadata.layer: #CORE
+annotate view ZC_MM_WMS_EXEC_PROCESSO
+    with 
+{
+   
+    @UI.lineItem: [{ position: 10 }]
+    @UI.selectionField: [{ position: 10 }]
+    Vbeln;                      
+    @UI.lineItem: [{ position: 20 }]
+    Posnr;                      
+    @UI.lineItem: [{ position: 30 }]
+    Werks;                      
+    @UI.lineItem: [{ position: 40 }]
+    Lgort;     
+                     
+    @UI.lineItem: [{ position: 50 }]
+    @UI.selectionField: [{ position: 20 }] 
+    @Consumption.valueHelpDefinition: [{ entity:{ name: 'ZI_MM_VH_TIPO_DOC', element: 'ZtipoDoc' } }]
+    @Consumption.filter.mandatory: true  
+    ZtipoDoc; 
+                      
+    @UI.lineItem: [{ position: 60 }]
+    @UI.selectionField: [{ position: 30 }]
+    @Consumption.valueHelpDefinition: [{ entity:{ name: 'ZI_MM_VH_Status_Int', element: 'ZstatusIntegracao' } }]
+    @Consumption.filter: {  
+                           selectionType: #SINGLE,
+                           multipleSelections: false,
+                           defaultValue: '02' 
+                         }  
+    ZstatusIntegracao;          
+    @UI.lineItem: [{ position: 70 }]
+    Menge;                      
+    @UI.lineItem: [{ position: 80 }]
+    Zqtrec;                     
+    @UI.lineItem: [{ position: 90 }]
+    Zqtpen;                     
+    @UI.lineItem: [{ position: 100 }]
+    Meins;                      
+    @UI.lineItem: [{ position: 110 }]
+    Cancel;                     
+    @UI.lineItem: [{ position: 120 }]
+    Mblnr;                      
+    @UI.lineItem: [{ position: 130 }]
+    Mjahr;                      
+    @UI.lineItem: [{ position: 140 }]
+    MoveStloc;                  
+    @UI.lineItem: [{ position: 150 }]
+    Ernam;                      
+    @UI.lineItem: [{ position: 160 }]
+    Erdat;                      
+    @UI.lineItem: [{ position: 170 }]
+    Erzet;                      
+    @UI.lineItem: [{ position: 180 }]
+    Aenam;                      
+    @UI.lineItem: [{ position: 190 }]
+    Aedat;                      
+    @UI.lineItem: [{ position: 200 }]
+    Aezet;                      
+    @UI.lineItem: [{ position: 210 }]
+    Type;                       
+    @UI.lineItem: [{ position: 220 }]
+    Id;                         
+    @UI.lineItem: [{ position: 230 }]
+    Znumber;                    
+    @UI.lineItem: [{ position: 240 }]
+    Message;                    
+    @UI.lineItem: [{ position: 250 }]
+    OverallSDProcessStatus;     
+    @UI.lineItem: [{ position: 260 }]
+    bukrs;                      
+    @UI.lineItem: [{ position: 270 }]
+    process;                    
+    @UI.lineItem: [{ position: 280 }]
+    edoc_type;                  
+    @UI.lineItem: [{ position: 290 }]
+    posting_date;
+
+    
+}

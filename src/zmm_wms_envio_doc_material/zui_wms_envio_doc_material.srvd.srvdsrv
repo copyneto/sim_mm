@@ -1,0 +1,4 @@
+@EndUserText.label: 'Envio documento material'
+define service ZUI_WMS_ENVIO_DOC_MATERIAL {
+  expose ZC_MM_WMS_INTEGRAR_DOC_MAT;
+}

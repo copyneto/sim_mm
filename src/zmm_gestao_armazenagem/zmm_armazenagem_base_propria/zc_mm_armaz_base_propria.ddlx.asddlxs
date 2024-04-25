@@ -1,0 +1,164 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+        typeName: '',
+        typeNamePlural: 'Documentos'
+    }
+@UI.presentationVariant: [{
+    sortOrder: [
+       { by: 'NfeRemessa' },
+       { by: 'Data', direction: #DESC } ],
+     visualizations: [{ type: #AS_LINEITEM }],
+     requestAtLeast: [ 'MaterialDocumentAjuste', 
+                       'MaterialDocumentYearAjuste', 
+                       'MaterialDocumentRetorno', 
+                       'MaterialDocumentYearRetorno',
+                       'MaterialDocumentEntrada', 
+                       'MaterialDocumentYearEntrada',
+                       'Empresa', 
+                       'TyMove', 
+                       'MotivoMov', 
+                       'Criticality',
+                       'QtdReceb'
+                      ]
+    }]
+annotate view ZC_MM_ARMAZ_BASE_PROPRIA
+    with 
+{
+    @UI.facet: [
+                   {  
+                      id: 'Header1',
+                      purpose: #HEADER,
+                      type: #DATAPOINT_REFERENCE,
+                      position: 10,
+                      targetQualifier: 'head'
+                   },
+                   { 
+                     id:             'DADOS',
+                     isSummary:       true,
+                     type:            #COLLECTION,
+                     label:           'Gestão de Armazenagem Base Própria',
+                     position:        20 },
+                        { parentId:        'DADOS',
+                          id:              'DADOS_PRINCIPAIS1',
+                          type:            #IDENTIFICATION_REFERENCE,
+                          position:        20,
+                          label: '' },
+                    {
+                     id:             'DADOS_GERAIS',
+                     isSummary:       true,
+                     type:            #COLLECTION,
+                     label:           'Dados Gerais',
+                     position:        20 },
+
+                        { parentId:        'DADOS_GERAIS',
+                          id:              'DADOS_PRINCIPAIS',
+                          type:            #FIELDGROUP_REFERENCE,
+                          position:        30,
+                          label: 'Dados principais',
+                          targetQualifier: 'DADOS_PRINCIPAIS' }
+                     ]
+   
+    @UI.lineItem: [{ position: 10, semanticObjectAction: 'postGoodsMovementInWebGUIEntrada', type: #WITH_INTENT_BASED_NAVIGATION, requiresContext: true  }]
+    @UI.identification: [{ position: 10 }]
+    MaterialDoc;
+    @UI.identification: [{ position: 20 }]
+    MaterialDocItem;
+    @UI.identification: [{ position: 30 }]
+    MaterialDocYear;
+   
+    @UI.lineItem: [{ position: 10 },
+                   {type: #FOR_ACTION, dataAction: 'ajuste_estoque', label: 'Ajusta Estoque',invocationGrouping: #CHANGE_SET}
+                  ]
+    @UI.selectionField: [{ position: 10 }]
+    @UI.dataPoint: { qualifier: 'head' }
+    @UI.fieldGroup: [{ position: 10, qualifier: 'DADOS_PRINCIPAIS' }]
+    NfeRemessa;
+    
+    @UI.lineItem: [{ position: 20 }]
+    @UI.selectionField: [{ position: 20 }]
+    @UI.fieldGroup: [{ position: 20, qualifier: 'DADOS_PRINCIPAIS' }]
+    Data;
+    
+    @UI.fieldGroup: [{ position: 30, qualifier: 'DADOS_PRINCIPAIS' }]
+    Empresa;
+    
+    @UI.lineItem: [{ position: 30 }]
+    @UI.selectionField: [{ position: 30 }]
+    @UI.fieldGroup: [{ position: 30, qualifier: 'DADOS_PRINCIPAIS' }]
+    Centro;
+    
+    @UI.lineItem: [{ position: 40 }]
+    //@UI.fieldGroup: [{ position: 40, qualifier: 'DADOS_PRINCIPAIS' }]
+    NomeCentro;
+    
+    @UI.lineItem: [{ position: 50, semanticObjectAction: 'display', type: #WITH_INTENT_BASED_NAVIGATION, requiresContext: true  }]
+    @UI.selectionField: [{ position: 40 }]
+    @UI.fieldGroup: [{ position: 50, qualifier: 'DADOS_PRINCIPAIS' }]
+    Material;
+    
+    @UI.lineItem: [{ position: 60 }]
+    //@UI.fieldGroup: [{ position: 60, qualifier: 'DADOS_PRINCIPAIS' }]
+    MaterialName;
+    
+    //@UI.lineItem: [{ position: 70 }]
+    @UI.fieldGroup: [{ position: 70, qualifier: 'DADOS_PRINCIPAIS' }]
+    MotivoMov;
+    
+    //@UI.lineItem: [{ position: 80}]
+    @UI.fieldGroup: [{ position: 80, qualifier: 'DADOS_PRINCIPAIS' }]
+    QtdDescarga;
+    
+    @UI.lineItem: [{ position: 90 }]
+    @UI.dataPoint: { qualifier: 'head' }
+    QtsFaturada;
+    
+    @UI.lineItem: [{ position: 100 }]
+    @UI.dataPoint: { qualifier: 'head' }
+    PerdaGanho;
+    
+    @UI.lineItem: [{ position: 110 }]
+    @UI.dataPoint: { qualifier: 'head' }
+    valorPerdaGanho; 
+    
+    @UI.fieldGroup: [{ position: 100, qualifier: 'DADOS_PRINCIPAIS' }]
+    TyMove;
+    
+    //@UI.lineItem: [{ position: 100 }]
+    //@UI.fieldGroup: [{ position: 70, qualifier: 'DADOS_PRINCIPAIS' }]
+    //MotivoMov;
+    
+    @UI.lineItem: [{ position: 120, semanticObjectAction: 'manage', type: #WITH_INTENT_BASED_NAVIGATION, requiresContext: true  }]
+    @UI.selectionField: [{ position: 50 }]
+    @UI.fieldGroup: [{ position: 80, qualifier: 'DADOS_PRINCIPAIS' }] 
+    BusinessPartner;
+    
+    @UI.lineItem: [{ position: 130 }]
+    @UI.fieldGroup: [{ position: 90, qualifier: 'DADOS_PRINCIPAIS' }]
+    NomeBP;
+    
+    @UI.lineItem: [{ position: 140, semanticObjectAction: 'postGoodsMovementInWebGUIRetorno', type: #WITH_INTENT_BASED_NAVIGATION, requiresContext: true  }]
+    @UI.fieldGroup: [{ position: 100, qualifier: 'DADOS_PRINCIPAIS' }]
+    Doc_Material_Retorno;
+    
+    @UI.lineItem: [{ position: 150 }]
+    @UI.selectionField: [{ position: 60 }]
+    Status;
+    
+    @UI.lineItem: [{ position: 160 }]
+    Estoque_Ajustado;
+    
+    @UI.lineItem: [{ position: 170, semanticObjectAction: 'postGoodsMovementInWebGUI', type: #WITH_INTENT_BASED_NAVIGATION, requiresContext: true  }]
+    @UI.fieldGroup: [{ position: 110, qualifier: 'DADOS_PRINCIPAIS' }]
+    Doc_Material_Ajuste; 
+    
+          
+    @UI.lineItem: [{ position: 180, semanticObjectAction: 'display', type: #WITH_INTENT_BASED_NAVIGATION, requiresContext: true }]    
+    @UI.fieldGroup: [{ position: 130, qualifier: 'DADOS_PRINCIPAIS' }]
+    BR_NotaFiscal;
+    
+    @UI.hidden: true
+    QtdReceb;
+ 
+    
+ 
+}

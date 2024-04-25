@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition Benefício Fiscal'
+define service Zui_mm_cbenef {
+  expose ZC_MM_CBENEF;
+}

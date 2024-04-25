@@ -1,0 +1,48 @@
+@Metadata.layer: #CORE
+//@UI.headerInfo: { typeNamePlural: 'Cadastro Materias',
+//typeName: 'Aprovador',
+//title: { type: #STANDARD, value:'Centro' },
+//description: { type: #STANDARD, value: 'Centro' } }
+annotate view ZC_MM_DE_PARA_CAD_MAT with
+{
+
+  @UI.facet:   [ { id:             'Cadastro_Materiais',
+                  purpose:         #STANDARD,
+                  type:            #IDENTIFICATION_REFERENCE,
+                  label:           'Cadastro de Aprovadores',
+                  position:        10 } ]
+
+  @UI.selectionField: [{ position: 10 }]
+  @UI: { lineItem: [ { position:10 } ]}
+  @UI.identification: [{ position: 10 }]
+  @EndUserText.label: 'Centro'
+  Centro;
+  @UI.selectionField: [{ position: 30 }]
+  @UI: { lineItem: [ { position:30 } ]}
+  @UI.identification: [{ position: 30 }]
+  @EndUserText.label: 'Material'
+  Material;
+  @UI.selectionField: [{ position: 20 }]
+  @UI: { lineItem: [ { position:20 } ]}
+  @UI.identification: [{ position: 20 }]
+  @EndUserText.label: 'Depósito Revenda'
+  Deposito_rev;
+  @UI.selectionField: [{ position: 40 }]
+  @UI: { lineItem: [ { position:40 } ]}
+  @UI.identification: [{ position: 40 }]
+  @EndUserText.label: 'Versão'
+  Versao;
+  @UI: { lineItem: [ { position:50 } ]}
+  @EndUserText.label: 'Criado Por'
+  Criado_por;
+  @UI: { lineItem: [ { position:60 } ]}
+  @EndUserText.label: 'Criado Em'
+  Criado_em;
+  @UI: { lineItem: [ { position:70 } ]}
+  @EndUserText.label: 'Modificado por'
+  Modificado_por;
+  @UI: { lineItem: [ { position:80 } ]}
+  @EndUserText.label: 'Modificado em'
+  Modificado_em;
+
+}

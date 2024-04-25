@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service definition - App execução de processos'
+define service ZUI_WMS_EXEC_PROCESSO {
+  expose ZC_MM_WMS_EXEC_PROCESSO;
+  expose ZC_MM_WMS_EXEC_PROCESSO_CE;
+}

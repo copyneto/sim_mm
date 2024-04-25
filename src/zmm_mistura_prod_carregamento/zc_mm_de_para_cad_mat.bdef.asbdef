@@ -1,0 +1,9 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_MM_DE_PARA_CAD_MAT //alias <alias_name>
+{
+  use create;
+  use update;
+  use delete;
+}

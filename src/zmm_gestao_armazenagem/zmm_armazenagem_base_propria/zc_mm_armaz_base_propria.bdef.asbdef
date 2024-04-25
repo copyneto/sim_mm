@@ -1,0 +1,12 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_MM_ARMAZ_BASE_PROPRIA alias Propria
+{
+
+  use action ajuste_estoque;
+  use action gerar_retorno;
+  use action descarga;
+  use action motivo;
+  use action set_qtd_receb;
+}

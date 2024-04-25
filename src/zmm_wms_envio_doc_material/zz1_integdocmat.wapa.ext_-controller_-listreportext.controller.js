@@ -1,0 +1,3 @@
+sap.ui.define(["sap/m/MessageToast"],function(t){"use strict";return{onInit:function(t){this.byId("br.com.redesim.wmsintegrdocrmaterial::sap.suite.ui.generic.template.ListReport.view.ListReport::ZC_MM_WMS_INTEGRAR_DOC_MAT--listReportFilter-btnGo").setTex+
+t("Executar integração")}}});                                                                                                                                                                                                                                  
+//# sourceMappingURL=ListReportExt.controller.js.map                                                                                                                                                                                                           

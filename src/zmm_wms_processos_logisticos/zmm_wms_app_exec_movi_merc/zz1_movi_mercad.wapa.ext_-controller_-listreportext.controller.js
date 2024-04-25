@@ -1,0 +1,3 @@
+sap.ui.define(["sap/m/MessageToast"],function(e){"use strict";return{Executar:function(t){let s=this.getView().byId("listReportFilter").getFilters();var i=this.getView().getModel();let n=this.templateBaseExtension.getExtensionAPI().getSelectedContexts();+
+return new Promise((t,n)=>{i.read("/ZC_MM_WMS_EXEC_MOVI_MERC_CE",{filters:s,success:function(s,i){t(i.body);e.show(s.results[0].message)},error:function(e){n(e)}})})}}});                                                                                     
+//# sourceMappingURL=ListReportExt.controller.js.map                                                                                                                                                                                                           

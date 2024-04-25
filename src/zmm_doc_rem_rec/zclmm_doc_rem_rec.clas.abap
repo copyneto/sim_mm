@@ -1,0 +1,5 @@
+CLASS zclmm_doc_rem_rec DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zi_mm_doc_rem_rec.
+ENDCLASS.
+
+CLASS zclmm_doc_rem_rec IMPLEMENTATION.
+ENDCLASS.

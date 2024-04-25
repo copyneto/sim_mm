@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_NROB" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <ATTRIBUTES>
+    <OBJECT>ZMM_NOTA_D</OBJECT>
+    <DOMLEN>CHAR9</DOMLEN>
+    <PERCENTAGE>10.0</PERCENTAGE>
+    <BUFFER>X</BUFFER>
+    <NOIVBUFFER>00000010</NOIVBUFFER>
+    <UNAME>APONCIANO</UNAME>
+    <UDATE>2024-01-26</UDATE>
+    <UTIME>09:32:37</UTIME>
+   </ATTRIBUTES>
+   <TEXT>
+    <LANGU>E</LANGU>
+    <OBJECT>ZMM_NOTA_D</OBJECT>
+   </TEXT>
+  </asx:values>
+ </asx:abap>
+</abapGit>

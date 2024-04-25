@@ -1,0 +1,8 @@
+projection;
+strict;
+
+define behavior for ZC_MM_WMS_DOC_INVENTARIO alias InventarioWMS
+{
+
+  use action enviardocs;
+}

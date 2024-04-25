@@ -1,0 +1,97 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.typeNamePlural: 'Carga Historico CST60'
+@UI.headerInfo.typeName: 'Carga Historico CST60'
+annotate view ZC_MM_HIST_CST60 with
+{
+  @UI.facet: [ { id:            'id_hist_cst60',
+                   purpose:       #STANDARD,
+                   type:          #IDENTIFICATION_REFERENCE,
+                   label:         'Carga Historico CST60',
+                   position:      10 }  ]
+
+  @UI: {  identification: [ { position: 10 } ] }
+  @EndUserText.label: 'Número NF-e'
+  nfenum;
+  @UI: { identification: [ { position: 20 } ] }
+  @EndUserText.label: 'Serie'
+  series;
+  @UI: { lineItem: [ {  position: 10 } ]}
+  @UI: { selectionField: [{ position: 10 }] }
+  @Consumption.valueHelpDefinition: [{ entity:{ name: 'ZI_MM_VH_CST60_NFENUM', element: 'NumeroNFe' }}]
+  @EndUserText.label: 'Número NF-e'
+  NumeroNFe;
+  @UI: { lineItem: [ {  position: 30 } ],statusInfo: [{qualifier: 'Hidden'}],
+  identification: [ { position: 30 } ] }
+  @UI: { selectionField: [{ position: 40 }] }
+  @Consumption.valueHelpDefinition: [{ entity:{ name: 'ZI_MM_VH_CST60_STCD1', element: 'stcd1' }}]
+  @EndUserText.label: 'CNPJ Fornecedor'
+  stcd1;
+  @UI: { lineItem: [ {  position: 20 } ],
+  identification: [ { position: 40 } ] }
+  @UI: { selectionField: [{ position: 30 }] }
+  @EndUserText.label: 'Data Criação'
+  credat;
+  @UI: { lineItem: [ {  position: 40 } ],
+  identification: [ { position: 50 } ] }
+  @UI: { selectionField: [{ position: 50 }] }
+  @Consumption.valueHelpDefinition: [{ entity:{ name: 'ZI_MM_VH_CST60_IMATERIAL', element: 'Matnr' }}]
+  @EndUserText.label: 'Material'
+  matnr;
+  @UI: { lineItem: [ {  position: 50 } ],
+  identification: [ { position: 60 } ] }
+  @UI: { selectionField: [{ position: 70 }] }
+  @EndUserText.label: 'CFOP'
+  @Consumption.valueHelpDefinition: [{ entity:{ name: 'ZI_MM_VH_CST60_CFOP', element: 'Cfop' }}]
+  cfop;
+  @UI: { lineItem: [ {  position: 60 } ]}
+  @UI:{identification: [{ position: 70 }]}
+  @EndUserText.label: 'Quantidade'
+  menge;
+  @UI: { lineItem: [ {  position: 80 } ],
+  identification: [ { position: 90 } ] }
+  @UI: { selectionField: [{ position: 60 }] }
+  @Consumption.valueHelpDefinition: [{ entity:{ name: 'ZI_MM_VH_CST60_IPLANT', element: 'Werks' }}]
+  @EndUserText.label: 'Centro'
+  werks;
+  @UI: { lineItem: [ {  position: 90 } ],
+  identification: [ { position: 100 } ] }
+  @EndUserText.label: 'CST ICMS'
+  cst_icms;
+  @UI: { lineItem: [ {  position: 110 } ],
+  identification: [ { position: 120 } ] }
+  @EndUserText.label: 'BC ICMS próprio'
+  bc_icms;
+  @UI: { lineItem: [ {  position: 120 } ],
+  identification: [ { position: 130 } ] }
+  @EndUserText.label: 'Valor ICMS próprio'
+  v_icms_pr;
+  @UI: { lineItem: [ {  position: 130 } ],
+  identification: [ { position: 140 } ] }
+  @EndUserText.label: 'Base ICMS ST'
+  bc_icms_st;
+  @UI: { lineItem: [ {  position: 140 } ],
+  identification: [ { position: 150 } ] }
+  @EndUserText.label: 'Valor ICMS ST'
+  v_icms_st;
+  @UI: { lineItem: [ {  position: 150 } ],
+  identification: [ { position: 160 } ] }
+  @EndUserText.label: 'BC ICMS ST FCP'
+  bc_icms_st_fcp;
+  @UI: { lineItem: [ {  position: 160 } ],
+  identification: [ { position: 170 } ] }
+  @EndUserText.label: 'Valor FCP-ST'
+  v_icms_st_fcp;
+  @UI: { lineItem: [ {  position: 170 } ],
+  identification: [ { position: 180 } ] }
+  @EndUserText.label: 'Alíquota ICMS'
+  v_icms_rate;
+  @UI: { lineItem: [ {  position: 175 } ],
+  identification: [ { position: 185 } ] }
+  @EndUserText.label: 'Alíquota ST'
+  v_icms_rate_st;
+  @UI: { lineItem: [ {  position: 180 } ],
+  identification: [ { position: 190 } ] }
+  @EndUserText.label: 'Alíquota FCP'
+  v_icms_rate_fcp;
+
+}

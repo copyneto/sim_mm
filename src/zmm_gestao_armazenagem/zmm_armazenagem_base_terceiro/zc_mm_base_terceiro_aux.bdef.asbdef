@@ -1,0 +1,11 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_MM_BASE_TERCEIRO_AUX //alias <alias_name>
+{
+use action descarga;
+use action motivo;
+use action tipomov;
+use action ajuste_estoque;
+use action gerar_retorno;
+}

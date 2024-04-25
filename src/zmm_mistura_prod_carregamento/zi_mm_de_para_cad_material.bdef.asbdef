@@ -1,0 +1,32 @@
+managed implementation in class zclmm_de_para_cad_material unique;
+strict ( 2 );
+
+define behavior for ZI_MM_DE_PARA_CAD_MATERIAL alias Manutencao
+persistent table ztmm_de_para_dep
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+validation ValidarCampos on save {create; update;}
+validation ValidarDeposito on save {field Deposito_rev; create;}
+field ( readonly : update )  Centro,Material,Deposito_rev;
+
+  mapping for ztmm_de_para_dep
+  {
+    Centro         = werks;
+    Material       = matnr;
+    Deposito_rev   = lgort;
+    Versao         = verid;
+    Criado_por     = CREATED_BY;
+    Criado_em      = CREATED_AT;
+    Modificado_por = LAST_CHANGED_BY;
+    Modificado_em  = LAST_CHANGED_AT;
+    Hora           = LOCAL_LAST_CHANGED_AT;
+  }
+
+
+}

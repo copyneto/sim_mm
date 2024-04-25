@@ -1,0 +1,67 @@
+@Metadata.layer: #CORE
+annotate view ZC_MM_DOC_REM_REC with
+{
+
+  @UI: {  lineItem:       [ { position: 10 },
+                          { type: #FOR_ACTION, dataAction: 'soma', label: 'Marcar para eliminação' }
+                        ]}
+  @UI.selectionField: [{ position: 10 }]
+  @Consumption.valueHelpDefinition: [{ entity:{ name: 'ZI_MM_VH_REMESSA', element: 'Remessa' } }]
+  Vbeln;
+  @UI.lineItem: [{ position: 20 }]
+  Posnr;
+  @UI.lineItem: [{ position: 30 }]
+  @UI.selectionField: [{ position: 40 }]
+  @Consumption.valueHelpDefinition: [{ entity:{ name: 'ZI_CA_VH_WERKS', element: 'WerksCode' } }]
+  Werks;
+  @UI.lineItem: [{ position: 40 }]
+  Lgort;
+  @UI.lineItem: [{ position: 50 }]
+  @Consumption.valueHelpDefinition: [{ entity:{ name: 'ZI_MM_VH_TIPO_DOC', element: 'ZtipoDoc' } }]
+  @UI.selectionField: [{ position: 20 }]
+  ZtipoDoc;
+  @UI.lineItem: [{ position: 60 }]
+  @Consumption.valueHelpDefinition: [{ entity:{ name: 'ZI_MM_VH_STATUS_INT', element: 'ZstatusIntegracao' } }]
+  @UI.selectionField: [{ position: 30 }]
+  ZstatusIntegracao;
+  @UI.lineItem: [{ position: 70 }]
+  Menge;
+  @UI.lineItem: [{ position: 80 }]
+  Zqtrec;
+  @UI.lineItem: [{ position: 90 }]
+  Zqtpen;
+  @UI.lineItem: [{ position: 100 }]
+  Meins;
+  @UI.lineItem: [{ position: 110 }]
+  Cancel;
+  @UI.lineItem: [{ position: 120 }]
+  Mblnr;
+  @UI.lineItem: [{ position: 130 }]
+  Mjahr;
+  @UI.lineItem: [{ position: 140 }]
+  @UI.selectionField: [{ position: 50 }]
+  MoveStloc;
+  @UI.lineItem: [{ position: 150 }]
+  Ernam;
+  @UI.lineItem: [{ position: 160 }]
+  @Consumption.filter.selectionType: #INTERVAL
+  @UI.selectionField: [{ position: 10 }]
+  @Consumption.filter.mandatory: true
+  Erdat;
+  @UI.lineItem: [{ position: 170 }]
+  Erzet;
+  @UI.lineItem: [{ position: 180 }]
+  Aenam;
+  @UI.lineItem: [{ position: 190 }]
+  Aedat;
+  @UI.lineItem: [{ position: 200 }]
+  Aezet;
+  @UI.lineItem: [{ position: 210 }]
+  Type;
+  @UI.lineItem: [{ position: 220 }]
+  Id;
+  @UI.lineItem: [{ position: 230 }]
+  Znumber;
+  @UI.lineItem: [{ position: 240 }]
+  Message;
+}

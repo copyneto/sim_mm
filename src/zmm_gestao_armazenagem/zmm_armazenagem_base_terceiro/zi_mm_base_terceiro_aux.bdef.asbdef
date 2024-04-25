@@ -1,0 +1,19 @@
+unmanaged implementation in class zclmm_base_terceiro_aux unique;
+strict ( 2 );
+
+define behavior for ZI_MM_BASE_TERCEIRO_AUX //alias <alias_name>
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+//  create;
+//  update;
+//  delete;
+
+  action ( features : instance ) descarga parameter ZI_MM_TERCEIRO_PARAM;
+  action ( features : instance ) motivo parameter ZI_MM_TERCEIRO_PARAM;
+  action ( features : instance ) tipomov parameter ZI_MM_TERCEIRO_PARAM;
+  action ( features : instance ) ajuste_estoque; // parameter ZI_MM_TERCEIRO_PARAM;
+  action ( features : instance ) gerar_retorno parameter ZI_MM_GERAR_RETORNO_POPUP;
+}

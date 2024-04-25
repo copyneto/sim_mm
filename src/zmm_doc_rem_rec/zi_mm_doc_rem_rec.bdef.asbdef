@@ -1,0 +1,14 @@
+unmanaged implementation in class zclmm_doc_rem_rec unique;
+strict ( 2 );
+
+define behavior for ZI_MM_DOC_REM_REC //alias <alias_name>
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+//  create;
+//  update;
+//  delete;
+  action ( features : instance ) soma;
+}

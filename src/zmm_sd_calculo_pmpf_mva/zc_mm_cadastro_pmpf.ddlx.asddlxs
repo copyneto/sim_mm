@@ -1,0 +1,76 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: { typeNamePlural: 'Cadastro PMPF'}
+
+annotate view ZC_MM_CADASTRO_PMPF with
+{
+
+  @UI.facet:   [ { id:            'Cadastro_PMPF',
+                 purpose:         #STANDARD,
+                 type:            #IDENTIFICATION_REFERENCE,
+                 label:           'Cadastro de condições PMPF',
+                 position:        10 } ]
+
+  @UI.selectionField: [{ position: 10 }]
+  @UI: { lineItem: [ { position:10 } ]}
+  @UI.identification: [{ position: 10 }]
+  @EndUserText.label: 'Chave do país/região'
+  Chave_pais;
+
+  @UI.selectionField: [{ position: 20 }]
+  @UI: { lineItem: [ { position:20 } ]}
+  @UI.identification: [{ position: 20 }]
+  @EndUserText.label: 'Região fiscal'
+  Regiao_fiscal;
+
+  @UI.selectionField: [{ position: 30 }]
+  @UI: { lineItem: [ { position:30 } ]}
+  @UI.identification: [{ position: 30 }]
+  @EndUserText.label: 'Material'
+  Material;
+
+  @UI.selectionField: [{ position: 40 }]
+  @UI: { lineItem: [ { position:40 } ]}
+  @UI.identification: [{ position: 40 }]
+  @EndUserText.label: 'Válido desde'
+  Valido_des;
+
+  @UI: { lineItem: [ { position:50 } ]}
+  @UI.identification: [{ position: 50 }]
+  @EndUserText.label: 'Válido até'
+  Valido_ate;
+
+  @UI: { lineItem: [ { position:60 } ]}
+  @UI.identification: [{ position: 60 }]
+  @EndUserText.label: 'Prc.Médio pond.clnt.final'
+  Preco;
+
+  @UI: { lineItem: [ { position:70 } ]}
+  @UI.identification: [{ position: 70 }]
+  @EndUserText.label: 'Número de unidade'
+  Num_uni;
+
+  @UI: { lineItem: [ { position:80 } ]}
+  @UI.identification: [{ position: 80 }]
+  @EndUserText.label: 'Unidade por preço (imposto Brasil)'
+  Uni_preco;
+
+  @UI.identification: [{ position: 90 }]
+  @EndUserText.label: 'Criado Por'
+  Criado_por;
+
+  @UI.identification: [{ position: 100 }]
+  @EndUserText.label: 'Criado Em'
+  Criado_em;
+
+  @UI.identification: [{ position: 110 }]
+  @EndUserText.label: 'Modificado por'
+  Modificado_por;
+
+  @UI.identification: [{ position: 120 }]
+  @EndUserText.label: 'Modificado em'
+  Modificado_em;
+
+  @UI.identification: [{ position: 130 }]
+  @EndUserText.label: 'Hora'
+  Hora;
+}

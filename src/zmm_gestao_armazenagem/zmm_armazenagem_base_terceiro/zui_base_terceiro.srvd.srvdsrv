@@ -1,0 +1,11 @@
+@EndUserText.label: 'Service Definition - Base Terceiro'
+define service ZUI_BASE_TERCEIRO {
+  expose ZC_MM_BASE_TERCEIRO_AUX;
+  expose ZI_MM_VH_GRUND;
+  expose ZI_MM_VH_BWART;
+  expose ZI_MM_BASE_TERC_PDF as PDF;
+  expose ZI_MM_VH_MOTIVO_MOV as MotivoVH;
+  expose ZI_MM_VH_BP_BASE as BpBase;
+  expose ZI_MM_VH_MODALI_FRETE as ModalidadeFrete;
+  expose ZI_MM_VH_AGENTE_FRETE as AgenteFrete;
+}
